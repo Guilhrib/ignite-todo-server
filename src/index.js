@@ -1,9 +1,10 @@
 const express = require('express')
-const { json } = require('express/lib/response')
 const { v4: uuidv4 } = require('uuid')
+const cors = require('cors');
 
 const app = express()
 
+app.use(cors());
 app.use(express.json())
 
 const users = []
